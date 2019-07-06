@@ -1,0 +1,1 @@
+scp -r test@192.168.2.100:/wangdao/C_C++方向/第30期/Linux/`date -d "0 week" +%Y%m%d`/code/* .
