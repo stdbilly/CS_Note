@@ -14,14 +14,14 @@ public:
         strcpy(_pstr,pstr);
         cout << "String(const char *pstr)" << endl;
     }
-
+    //拷贝构造函数
     String(const String & rhs)
         :_pstr ( new char[strlen(rhs._pstr)+1]())
     {
         strcpy(_pstr,rhs._pstr);
         cout<<"String(const String & rhs)"<<endl;
     }
-
+    //赋值运算符函数
     String & operator=(const String & rhs)
     {
         if(this != &rhs)
