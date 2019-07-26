@@ -5,28 +5,27 @@ using std::endl;
 class Stack{
 public:
     Stack(int maxSize=10)
-    :_maxSize(maxSize),
-    _data(new int[_maxSize]()),
-    _top(-1){ cout<<"Stack()"<<endl; }
+        :_maxSize(maxSize),
+        _data(new int[_maxSize]()),
+        _top(-1){}
 
     ~Stack(){
         if(_data){
             delete [] _data;
         }
-        cout<<"~Stack()"<<endl; 
     }
 
     bool empty(){
-        return _top==-1 ? true:false;
+        return _top==-1 ;
     }
 
     bool full(){
-        return _top>=_maxSize ? true:false;
+        return _top==_maxSize-1 ;
     }
 
     void push(int x){
         if(full()){
-            return ;
+            cout<<"stack is full"<<endl ;
         }else{
             _data[++_top]=x;
         }
@@ -34,19 +33,14 @@ public:
 
     void pop(){
         if(empty()){
-            return;
+            cout<<"stack is empty"<<endl ;
         }else{
-            _top--;
+            --_top;
         }
     }
 
     int top(){
-        if(empty()){
-            return -1;
-        }else{
-            return _data[_top];
-        }
-        
+        return _data[_top];
     }
 private:
     int _maxSize;
@@ -55,13 +49,24 @@ private:
 };
 
 void test1(){
-    Stack stack;
-    stack.push(10);
-    stack.push(12);
-    stack.push(14);
-    cout<<stack.top()<<endl;
-    stack.pop();
-    cout<<stack.top()<<endl;
+    Stack stack(10);                                                                                                                                                                         
+    cout << "此时栈中是否为空?" << stack.empty() << endl;
+    stack.push(1);
+    cout << "此时栈中是否为空?" << stack.empty() << endl;
+
+    for(int idx = 2; idx != 12; ++idx) {
+        stack.push(idx);
+
+    }   
+    cout << "此时栈中是否已满?" << stack.full() << endl;
+
+    while(!stack.empty()) {
+        cout << stack.top() << endl;
+        stack.pop();
+
+    }   
+    cout << "此时栈中是否为空?" << stack.empty() << endl;
+
 }
 int main()
 {   test1();

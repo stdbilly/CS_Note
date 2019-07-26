@@ -1,16 +1,19 @@
-#include "mutexcond.h"
+#include "MutexCond.h"
+#include <unistd.h>
+#include <iostream>
+using std::cout;
+using std::endl;
+using namespace lock;
 
 class Data{
 public:
     Data(MutexLock& mutex,Condition& cond,int tickets=20)
     :_tickets(tickets),
     _mutex(mutex),
-    _cond(cond){
-        cout<<"Data(MutexLock& mutex,Condition& cond,int tickets=20)"<<endl;
-    }
+    _cond(cond){}
 
     bool haveTickets(){
-        return _tickets>0 ? true:false;
+        return _tickets>0 ;
     }
 
     void saleTickets(){
@@ -34,9 +37,8 @@ private:
 
 void* threadFun(void* p){
     Data* pArg=(Data*)p;
-    pArg->_mutex.lock();
+        MutexLockGuard autolock(pArg->_mutex);
     pArg->_cond.wait();
-    pArg->_mutex.unlock();
     cout<<"child thread wake up"<<endl;
     pthread_exit(nullptr);
 }
@@ -65,7 +67,7 @@ void* saleWindows1(void* p)
     int i=0;
     while(1)
     {
-        pArg->_mutex.lock();
+        MutexLockGuard autolock(pArg->_mutex);
         if(pArg->haveTickets())
         {
             cout<<"I am saleWindows1 start sale,"<<pArg->getTickets()<<endl;
@@ -76,10 +78,8 @@ void* saleWindows1(void* p)
                 pArg->_cond.notify();
             }
             cout<<"I am saleWindows1 sale finish,"<<pArg->getTickets()<<endl;
-            pArg->_mutex.unlock();
             sleep(1);
         }else{
-            pArg->_mutex.unlock();
             cout<<"I am saleWindows1,"<<i<<endl;
             break;
         }
@@ -92,7 +92,7 @@ void* saleWindows2(void* p)
     int i=0;
     while(1)
     {
-        pArg->_mutex.lock();
+        MutexLockGuard autolock(pArg->_mutex);
         if(pArg->haveTickets())
         {
             cout<<"I am saleWindows2 start sale,"<<pArg->getTickets()<<endl;
@@ -103,10 +103,8 @@ void* saleWindows2(void* p)
                 pArg->_cond.notify();
             }
             cout<<"I am saleWindows2 sale finish,"<<pArg->getTickets()<<endl;
-            pArg->_mutex.unlock();
             sleep(1);
         }else{
-            pArg->_mutex.unlock();
             cout<<"I am saleWindows2,"<<i<<endl;
             break;
         }
@@ -116,13 +114,12 @@ void* saleWindows2(void* p)
 void* setTickets(void* p)
 {
     Data* pArg=(Data*)p;
-        pArg->_mutex.lock();
+        MutexLockGuard autolock(pArg->_mutex);
     if(pArg->haveTickets())
     {
         pArg->_cond.wait();
     }
     pArg->setTickets(20);
-    pArg->_mutex.unlock();
     return nullptr;
 }
 
