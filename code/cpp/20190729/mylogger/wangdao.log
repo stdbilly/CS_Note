@@ -1,0 +1,40 @@
+2019-07-29 10:00:55,036 [ERROR] this is error message
+2019-07-29 10:00:55,039 [WARN] this is warn message
+2019-07-29 10:00:55,039 [INFO] this is info message
+2019-07-29 10:00:55,039 [DEBUG] this is debug message
+2019-07-29 10:01:35,045 [ERROR] this is error message
+2019-07-29 10:01:35,045 [WARN] this is warn message
+2019-07-29 10:01:35,045 [INFO] this is info message
+2019-07-29 10:01:35,045 [DEBUG] this is debug message
+2019-07-29 10:02:10,038 [ERROR] this is error message
+2019-07-29 10:02:10,038 [WARN] this is warn message
+2019-07-29 10:02:10,038 [INFO] this is info message
+2019-07-29 10:02:10,038 [DEBUG] this is debug message
+2019-07-29 10:15:22,406 [ERROR] [TestMylogger.cc:prefix:19] this is error message
+2019-07-29 10:15:22,406 [WARN] this is warn message
+2019-07-29 10:15:22,406 [INFO] this is info message
+2019-07-29 10:15:22,406 [DEBUG] this is debug message
+2019-07-29 10:18:45,023 [ERROR] [TestMylogger.cc:test0:23] this is error message
+2019-07-29 10:18:45,023 [WARN] this is warn message
+2019-07-29 10:18:45,023 [INFO] this is info message
+2019-07-29 10:18:45,023 [DEBUG] this is debug message
+2019-07-29 10:19:36,797 [ERROR] [TestMylogger.cc:test0:23] this is error message
+2019-07-29 10:19:36,797 [WARN] [TestMylogger.cc:test0:24] this is warn message
+2019-07-29 10:19:36,798 [INFO] [TestMylogger.cc:test0:25] this is info message
+2019-07-29 10:19:36,798 [DEBUG] [TestMylogger.cc:test0:26] this is debug message
+2019-07-29 10:19:42,664 [ERROR] [TestMylogger.cc:test0:23] this is error message
+2019-07-29 10:19:42,664 [WARN] [TestMylogger.cc:test0:24] this is warn message
+2019-07-29 10:19:42,664 [INFO] [TestMylogger.cc:test0:25] this is info message
+2019-07-29 10:19:42,664 [DEBUG] [TestMylogger.cc:test0:26] this is debug message
+2019-07-29 10:20:34,586 [ERROR] [TestMylogger.cc:test0:18] this is error message
+2019-07-29 10:20:34,586 [WARN] [TestMylogger.cc:test0:19] this is warn message
+2019-07-29 10:20:34,586 [INFO] [TestMylogger.cc:test0:20] this is info message
+2019-07-29 10:20:34,586 [DEBUG] [TestMylogger.cc:test0:21] this is debug message
+2019-07-29 10:23:41,262 [ERROR] [TestMylogger.cc:test2:36] this is error message
+2019-07-29 10:23:41,262 [WARN] [TestMylogger.cc:test2:37] this is warn message
+2019-07-29 10:23:41,262 [INFO] [TestMylogger.cc:test2:38] this is info message
+2019-07-29 10:23:41,262 [DEBUG] [TestMylogger.cc:test2:39] this is debug message
+2019-07-29 10:24:24,988 [ERROR] [TestMylogger.cc:test2:36] this is error message
+2019-07-29 10:24:24,989 [WARN] [TestMylogger.cc:test2:37] this is warn message
+2019-07-29 10:24:24,989 [INFO] [TestMylogger.cc:test2:38] this is info message
+2019-07-29 10:24:24,989 [DEBUG] [TestMylogger.cc:test2:39] this is debug message
