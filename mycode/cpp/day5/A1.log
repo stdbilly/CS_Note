@@ -1,8 +1,0 @@
-1564124471 DEBUG sub1 : Received storm warning
-1564124471 INFO sub1 : Closing all hatches
-1564124471 DEBUG sub1.sub2 : Hiding solar panels
-1564124471 ERROR sub1.sub2 : Solar panels are blocked
-1564124471 DEBUG sub1.sub2 : Applying protective shield
-1564124471 WARN sub1.sub2 : Unfolding protective shield
-1564124471 INFO sub1.sub2 : Solar panels are shielded
-1564124471 INFO sub1 : All hatches closed
