@@ -3,92 +3,84 @@ using std::cout;
 using std::endl;
 
 class Queue {
-public:
-    Queue(int maxSize=10)
-    :_pHead(nullptr),
-    _pRear(nullptr),
-    _maxSize(maxSize),
-    _size(0){
-        cout<<"Queue(int)"<<endl;
+   public:
+    Queue(int maxSize = 10)
+        : _pHead(nullptr), _pRear(nullptr), _maxSize(maxSize), _size(0) {
+        cout << "Queue(int)" << endl;
     }
 
-    bool empty(){
-        return _pHead==nullptr ? true:false;
-    }
+    bool empty() { return _pHead == nullptr ? true : false; }
 
-    bool full(){
-        return _size>=_maxSize ? true:false;
-    }
+    bool full() { return _size >= _maxSize ? true : false; }
 
-    void push(int x){
-        if(full()){
-            return ;
+    void push(int x) {
+        if (full()) {
+            return;
         }
-        Node *temp=new Node();
-        temp->data=x;
-        if(empty()){
-            _pHead=_pRear=temp;
-        }else{
-            _pRear->pNext=temp;
-            _pRear=temp;
+        Node* temp = new Node();
+        temp->data = x;
+        if (empty()) {
+            _pHead = _pRear = temp;
+        } else {
+            _pRear->pNext = temp;
+            _pRear = temp;
         }
         _size++;
     }
 
-    void pop(){
-        if(empty()){
+    void pop() {
+        if (empty()) {
             return;
         }
-        Node* temp=_pHead;
-        _pHead=_pHead->pNext;
+        Node* temp = _pHead;
+        _pHead = _pHead->pNext;
         delete temp;
         _size--;
     }
 
-    int front(){
-        if(empty()){
+    int front() {
+        if (empty()) {
             return -1;
         }
         return _pHead->data;
     }
 
-    int back(){
-        if(empty()){
+    int back() {
+        if (empty()) {
             return -1;
         }
         return _pRear->data;
     }
-    
-    ~Queue(){
-        while(_pHead){
-            Node* temp=_pHead;
-            _pHead=_pHead->pNext;
+
+    ~Queue() {
+        while (_pHead) {
+            Node* temp = _pHead;
+            _pHead = _pHead->pNext;
             delete temp;
         }
-        cout<<"~Queue()"<<endl;
+        cout << "~Queue()" << endl;
     }
-private:
+
+   private:
     struct Node {
         int data;
         Node* pNext;
     };
-    Node *_pHead,*_pRear;
+    Node *_pHead, *_pRear;
     int _maxSize;
     int _size;
 };
 
-void test1(){
+void test1() {
     Queue que;
     que.push(5);
     que.push(34);
     que.push(23);
     que.pop();
-    cout<<"front="<<que.front()<<endl
-        <<"rear="<<que.back()<<endl;
+    cout << "front=" << que.front() << endl << "rear=" << que.back() << endl;
 }
 
 int main() {
     test1();
     return 0;
 }
-
