@@ -6,6 +6,8 @@ using std::to_string;
 
 void test1(){
     //LogWarn("this is a warn messages");
+    int num = 10;
+    LogWarn("warn message, %d",num);
     LogError("this is a error messages");
     LogDebug("this is a debug messages");
     LogInfo("this is a info messages");
@@ -13,10 +15,7 @@ void test1(){
 }
 
 int main() {
-    //test1();
-    int num = 10;
-    Mylogger::getInstance()->warn("warn message, %d",num);
-    Mylogger::destroy();
+    test1();
     return 0;
 }
 
