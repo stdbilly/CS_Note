@@ -43,7 +43,7 @@ class Query {
 };
 
 ostream& operator<<(ostream& os, const Query& query) {
-    // quert通过它的query_base
+    // quert通过它的query_base指针对rep()进行了虚调用
     return os << query.rep();
 }
 
@@ -95,7 +95,7 @@ class BinaryQuery : public Query_base {
 };
 
 class AndQuery : public BinaryQuery {
-private:
+   private:
     friend Query operator&(const Query&, const Query&);
     AndQuery(const Query& lhs, const Query& rhs) : BinaryQuery(lhs, rhs, "&"){};
     QueryResult eval(const TextQuery&) const;
@@ -107,7 +107,7 @@ inline Query operator&(const Query& lhs, const Query& rhs) {
 }
 
 class OrQuery : public BinaryQuery {
-private:
+   private:
     friend Query operator|(const Query&, const Query&);
     OrQuery(const Query& lhs, const Query& rhs) : BinaryQuery(lhs, rhs, "|"){};
     QueryResult eval(const TextQuery&) const;
@@ -117,3 +117,5 @@ inline Query operator|(const Query& lhs, const Query& rhs) {
     shared_ptr<Query_base> tmp(new OrQuery(lhs, rhs));
     return Query(tmp);
 }
+
+bool getWord(string&);
