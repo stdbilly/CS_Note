@@ -15,6 +15,7 @@ using std::string;
 
 void test0()
 {
+	int number = 10;
 	wd::Mylogger::getInstance()->error(prefix("this is error message").c_str());
 	wd::Mylogger::getInstance()->warn(prefix("this is warn message").c_str());
 	wd::Mylogger::getInstance()->info(prefix("this is info message").c_str());
@@ -35,9 +36,16 @@ void test2()
 {
 	int number = 10;
 	LogError("this is error message, %d", number);
+	LogError("this is error message");
 	LogWarn("this is warn message");
 	LogInfo("this is info message");
 	LogDebug("this is debug message");
+}
+
+void test3()
+{
+	int number = 10;
+	wd::Mylogger::getInstance()->error("error message %d", number);
 }
  
 int main(void)
@@ -45,7 +53,8 @@ int main(void)
 	//test0();
 	//test1();
 	test2();
+	//test3();
 
-	wd::Mylogger::destroy();
+	//wd::Mylogger::destroy();
 	return 0;
 }

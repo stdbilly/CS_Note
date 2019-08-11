@@ -1,0 +1,911 @@
+desc: (none)
+cmd: ./a.out
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=2780884
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=2919986
+mem_heap_B=72708
+mem_heap_extra_B=28
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=2920038
+mem_heap_B=72716
+mem_heap_extra_B=44
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=2965453
+mem_heap_B=72916
+mem_heap_extra_B=60
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=3010427
+mem_heap_B=72988
+mem_heap_extra_B=76
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=3091553
+mem_heap_B=73188
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=3096676
+mem_heap_B=73324
+mem_heap_extra_B=116
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=3136877
+mem_heap_B=73332
+mem_heap_extra_B=132
+mem_stacks_B=0
+heap_tree=detailed
+n2: 73332 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x5385414: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010731: _dl_init (dl-init.c:72)
+   n0: 72704 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 628 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=3156835
+mem_heap_B=73340
+mem_heap_extra_B=148
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=3206304
+mem_heap_B=73380
+mem_heap_extra_B=164
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=3214670
+mem_heap_B=73396
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=3223886
+mem_heap_B=73388
+mem_heap_extra_B=156
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=3237124
+mem_heap_B=73380
+mem_heap_extra_B=140
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=3245165
+mem_heap_B=73451
+mem_heap_extra_B=141
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=3252739
+mem_heap_B=73470
+mem_heap_extra_B=162
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=3257815
+mem_heap_B=73447
+mem_heap_extra_B=185
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=3263191
+mem_heap_B=73583
+mem_heap_extra_B=233
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=3270889
+mem_heap_B=73703
+mem_heap_extra_B=305
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=3279371
+mem_heap_B=73743
+mem_heap_extra_B=281
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=3283632
+mem_heap_B=73882
+mem_heap_extra_B=366
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=3291183
+mem_heap_B=74058
+mem_heap_extra_B=422
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=3297527
+mem_heap_B=74106
+mem_heap_extra_B=430
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=3338036
+mem_heap_B=74178
+mem_heap_extra_B=446
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=3379751
+mem_heap_B=74186
+mem_heap_extra_B=478
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=3385056
+mem_heap_B=74362
+mem_heap_extra_B=470
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=3395362
+mem_heap_B=74362
+mem_heap_extra_B=470
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=3432899
+mem_heap_B=74402
+mem_heap_extra_B=486
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=3476246
+mem_heap_B=74450
+mem_heap_extra_B=494
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=3526695
+mem_heap_B=74490
+mem_heap_extra_B=510
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=3529039
+mem_heap_B=74538
+mem_heap_extra_B=518
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=3537924
+mem_heap_B=75562
+mem_heap_extra_B=526
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=3543038
+mem_heap_B=75593
+mem_heap_extra_B=535
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=3550718
+mem_heap_B=75671
+mem_heap_extra_B=545
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=3555013
+mem_heap_B=75719
+mem_heap_extra_B=553
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=3572805
+mem_heap_B=75733
+mem_heap_extra_B=579
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=3577153
+mem_heap_B=80741
+mem_heap_extra_B=643
+mem_stacks_B=0
+heap_tree=peak
+n3: 80741 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x5385414: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010731: _dl_init (dl-init.c:72)
+   n0: 72704 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n1: 5120 0x591518A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x5925377: _IO_doallocbuf (genops.c:365)
+   n1: 4096 0x59227C2: _IO_file_xsgetn (fileops.c:1310)
+    n1: 4096 0x5921492: fread_unlocked (iofread_u.c:40)
+     n1: 4096 0x596B912: __tzfile_read (tzfile.c:188)
+      n1: 4096 0x596B4F2: __tz_convert (tzset.c:406)
+       n1: 4096 0x4E9C79E: log4cpp::localtime(long const*, tm*) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+        n1: 4096 0x4EA4E8F: log4cpp::TimeStampComponent::append(std::__cxx11::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >&, log4cpp::LoggingEvent const&) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+         n1: 4096 0x4EA43D7: log4cpp::PatternLayout::format[abi:cxx11](log4cpp::LoggingEvent const&) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+          n1: 4096 0x4EA06E1: log4cpp::OstreamAppender::_append(log4cpp::LoggingEvent const&) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+           n1: 4096 0x4E96420: log4cpp::AppenderSkeleton::doAppend(log4cpp::LoggingEvent const&) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+            n1: 4096 0x4EA7B44: log4cpp::Category::callAppenders(log4cpp::LoggingEvent const&) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+             n1: 4096 0x4EA7DC4: log4cpp::Category::_logUnconditionally2(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+              n1: 4096 0x4EA7CE4: log4cpp::Category::_logUnconditionally(int, char const*, __va_list_tag*) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+               n1: 4096 0x4EA84FB: log4cpp::Category::warn(char const*, ...) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+                n1: 4096 0x10A211: wd::Mylogger::warn(char const*) (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+                 n1: 4096 0x10A8DE: test2() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+                  n0: 4096 0x10ABC4: main (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+   n1: 1024 0x5924496: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+    n1: 1024 0x59229EB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+     n1: 1024 0x5916975: fwrite (iofwrite.c:39)
+      n1: 1024 0x5409CB2: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+       n1: 1024 0x540A025: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+        n1: 1024 0x109FD4: wd::Mylogger::Mylogger() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+         n1: 1024 0x109BE0: wd::Mylogger::getInstance() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+          n1: 1024 0x10A824: test2() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+           n0: 1024 0x10ABC4: main (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+ n0: 2917 in 29 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=37
+#-----------
+time=3585845
+mem_heap_B=76632
+mem_heap_extra_B=696
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=3598040
+mem_heap_B=76663
+mem_heap_extra_B=721
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=3607821
+mem_heap_B=76119
+mem_heap_extra_B=673
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=3619309
+mem_heap_B=76632
+mem_heap_extra_B=696
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=3623942
+mem_heap_B=76199
+mem_heap_extra_B=697
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=3631389
+mem_heap_B=76119
+mem_heap_extra_B=673
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=3639420
+mem_heap_B=76632
+mem_heap_extra_B=696
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=3644578
+mem_heap_B=76119
+mem_heap_extra_B=673
+mem_stacks_B=0
+heap_tree=detailed
+n3: 76119 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x5385414: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010731: _dl_init (dl-init.c:72)
+   n0: 72704 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 2391 in 32 places, all below massif's threshold (1.00%)
+ n1: 1024 0x591518A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 1024 0x5925377: _IO_doallocbuf (genops.c:365)
+   n1: 1024 0x5924496: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+    n1: 1024 0x59229EB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+     n1: 1024 0x5916975: fwrite (iofwrite.c:39)
+      n1: 1024 0x5409CB2: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+       n1: 1024 0x540A025: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+        n1: 1024 0x109FD4: wd::Mylogger::Mylogger() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+         n1: 1024 0x109BE0: wd::Mylogger::getInstance() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+          n1: 1024 0x10A824: test2() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+           n0: 1024 0x10ABC4: main (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=45
+#-----------
+time=3651425
+mem_heap_B=76632
+mem_heap_extra_B=696
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=3659704
+mem_heap_B=76121
+mem_heap_extra_B=703
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=3667735
+mem_heap_B=76634
+mem_heap_extra_B=726
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=3672893
+mem_heap_B=76121
+mem_heap_extra_B=703
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=3679740
+mem_heap_B=76634
+mem_heap_extra_B=726
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=3680660
+mem_heap_B=76665
+mem_heap_extra_B=751
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=3680815
+mem_heap_B=76152
+mem_heap_extra_B=728
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=3682314
+mem_heap_B=76665
+mem_heap_extra_B=751
+mem_stacks_B=0
+heap_tree=detailed
+n3: 76665 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x5385414: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010731: _dl_init (dl-init.c:72)
+   n0: 72704 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 2937 in 32 places, all below massif's threshold (1.00%)
+ n1: 1024 0x591518A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 1024 0x5925377: _IO_doallocbuf (genops.c:365)
+   n1: 1024 0x5924496: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+    n1: 1024 0x59229EB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+     n1: 1024 0x5916975: fwrite (iofwrite.c:39)
+      n1: 1024 0x5409CB2: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+       n1: 1024 0x540A025: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+        n1: 1024 0x109FD4: wd::Mylogger::Mylogger() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+         n1: 1024 0x109BE0: wd::Mylogger::getInstance() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+          n1: 1024 0x10A824: test2() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+           n0: 1024 0x10ABC4: main (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=53
+#-----------
+time=3682638
+mem_heap_B=76634
+mem_heap_extra_B=726
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=3684249
+mem_heap_B=76716
+mem_heap_extra_B=748
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=3684373
+mem_heap_B=76203
+mem_heap_extra_B=725
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=3684524
+mem_heap_B=76121
+mem_heap_extra_B=703
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=3685009
+mem_heap_B=76072
+mem_heap_extra_B=680
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=3685065
+mem_heap_B=76023
+mem_heap_extra_B=657
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=3685127
+mem_heap_B=75962
+mem_heap_extra_B=646
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=3711953
+mem_heap_B=75943
+mem_heap_extra_B=625
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=3712193
+mem_heap_B=75823
+mem_heap_extra_B=601
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=3713153
+mem_heap_B=75815
+mem_heap_extra_B=569
+mem_stacks_B=0
+heap_tree=detailed
+n3: 75815 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x5385414: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010731: _dl_init (dl-init.c:72)
+   n0: 72704 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 2087 in 32 places, all below massif's threshold (1.00%)
+ n1: 1024 0x591518A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 1024 0x5925377: _IO_doallocbuf (genops.c:365)
+   n1: 1024 0x5924496: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+    n1: 1024 0x59229EB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+     n1: 1024 0x5916975: fwrite (iofwrite.c:39)
+      n1: 1024 0x5409CB2: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+       n1: 1024 0x540A025: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+        n1: 1024 0x109FD4: wd::Mylogger::Mylogger() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+         n1: 1024 0x109BE0: wd::Mylogger::getInstance() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+          n1: 1024 0x10A824: test2() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+           n0: 1024 0x10ABC4: main (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=63
+#-----------
+time=3713344
+mem_heap_B=75775
+mem_heap_extra_B=553
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=3713525
+mem_heap_B=75767
+mem_heap_extra_B=537
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=3713716
+mem_heap_B=75727
+mem_heap_extra_B=521
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=3716313
+mem_heap_B=75663
+mem_heap_extra_B=513
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=3719809
+mem_heap_B=75599
+mem_heap_extra_B=505
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=3760181
+mem_heap_B=75527
+mem_heap_extra_B=489
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=3761878
+mem_heap_B=75455
+mem_heap_extra_B=473
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=3765558
+mem_heap_B=75436
+mem_heap_extra_B=452
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=3765798
+mem_heap_B=75316
+mem_heap_extra_B=412
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=3765979
+mem_heap_B=75308
+mem_heap_extra_B=380
+mem_stacks_B=0
+heap_tree=detailed
+n3: 75308 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x5385414: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010731: _dl_init (dl-init.c:72)
+   n0: 72704 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 1580 in 32 places, all below massif's threshold (1.00%)
+ n1: 1024 0x591518A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 1024 0x5925377: _IO_doallocbuf (genops.c:365)
+   n1: 1024 0x5924496: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+    n1: 1024 0x59229EB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+     n1: 1024 0x5916975: fwrite (iofwrite.c:39)
+      n1: 1024 0x5409CB2: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+       n1: 1024 0x540A025: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+        n1: 1024 0x109FD4: wd::Mylogger::Mylogger() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+         n1: 1024 0x109BE0: wd::Mylogger::getInstance() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+          n1: 1024 0x10A824: test2() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+           n0: 1024 0x10ABC4: main (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=73
+#-----------
+time=3766170
+mem_heap_B=75268
+mem_heap_extra_B=364
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=3766351
+mem_heap_B=75260
+mem_heap_extra_B=348
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=3766542
+mem_heap_B=75220
+mem_heap_extra_B=332
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=3766981
+mem_heap_B=75156
+mem_heap_extra_B=324
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=3767077
+mem_heap_B=75092
+mem_heap_extra_B=316
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=3771794
+mem_heap_B=75020
+mem_heap_extra_B=300
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=3780032
+mem_heap_B=74972
+mem_heap_extra_B=292
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=3780140
+mem_heap_B=74860
+mem_heap_extra_B=284
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=3790252
+mem_heap_B=74812
+mem_heap_extra_B=276
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=3790455
+mem_heap_B=74764
+mem_heap_extra_B=268
+mem_stacks_B=0
+heap_tree=detailed
+n3: 74764 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x5385414: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010731: _dl_init (dl-init.c:72)
+   n0: 72704 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 1036 in 32 places, all below massif's threshold (1.00%)
+ n1: 1024 0x591518A: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 1024 0x5925377: _IO_doallocbuf (genops.c:365)
+   n1: 1024 0x5924496: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+    n1: 1024 0x59229EB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+     n1: 1024 0x5916975: fwrite (iofwrite.c:39)
+      n1: 1024 0x5409CB2: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+       n1: 1024 0x540A025: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+        n1: 1024 0x109FD4: wd::Mylogger::Mylogger() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+         n1: 1024 0x109BE0: wd::Mylogger::getInstance() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+          n1: 1024 0x10A824: test2() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+           n0: 1024 0x10ABC4: main (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=83
+#-----------
+time=3801273
+mem_heap_B=74724
+mem_heap_extra_B=252
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=3801476
+mem_heap_B=74684
+mem_heap_extra_B=236
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=3825561
+mem_heap_B=74484
+mem_heap_extra_B=220
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=3826367
+mem_heap_B=74284
+mem_heap_extra_B=204
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=3854115
+mem_heap_B=74212
+mem_heap_extra_B=188
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=3854339
+mem_heap_B=74140
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=3873420
+mem_heap_B=1436
+mem_heap_extra_B=164
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=90
+#-----------
+time=3875144
+mem_heap_B=412
+mem_heap_extra_B=156
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=91
+#-----------
+time=3875209
+mem_heap_B=392
+mem_heap_extra_B=136
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=92
+#-----------
+time=3875273
+mem_heap_B=352
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=detailed
+n5: 352 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 326 0x596BB98: __tzfile_read (tzfile.c:279)
+  n1: 326 0x596B4F2: __tz_convert (tzset.c:406)
+   n1: 326 0x4E9C79E: log4cpp::localtime(long const*, tm*) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+    n1: 326 0x4EA4E8F: log4cpp::TimeStampComponent::append(std::__cxx11::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >&, log4cpp::LoggingEvent const&) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+     n1: 326 0x4EA43D7: log4cpp::PatternLayout::format[abi:cxx11](log4cpp::LoggingEvent const&) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+      n1: 326 0x4EA06E1: log4cpp::OstreamAppender::_append(log4cpp::LoggingEvent const&) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+       n1: 326 0x4E96420: log4cpp::AppenderSkeleton::doAppend(log4cpp::LoggingEvent const&) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+        n1: 326 0x4EA7B44: log4cpp::Category::callAppenders(log4cpp::LoggingEvent const&) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+         n1: 326 0x4EA7DC4: log4cpp::Category::_logUnconditionally2(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+          n1: 326 0x4EA7CE4: log4cpp::Category::_logUnconditionally(int, char const*, __va_list_tag*) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+           n1: 326 0x4EA84FB: log4cpp::Category::warn(char const*, ...) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+            n1: 326 0x10A211: wd::Mylogger::warn(char const*) (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+             n1: 326 0x10A8DE: test2() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+              n0: 326 0x10ABC4: main (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+ n1: 14 0x59349B8: strdup (strdup.c:42)
+  n1: 14 0x596B4DF: __tz_convert (tzset.c:403)
+   n1: 14 0x4E9C79E: log4cpp::localtime(long const*, tm*) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+    n1: 14 0x4EA4E8F: log4cpp::TimeStampComponent::append(std::__cxx11::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >&, log4cpp::LoggingEvent const&) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+     n1: 14 0x4EA43D7: log4cpp::PatternLayout::format[abi:cxx11](log4cpp::LoggingEvent const&) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+      n1: 14 0x4EA06E1: log4cpp::OstreamAppender::_append(log4cpp::LoggingEvent const&) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+       n1: 14 0x4E96420: log4cpp::AppenderSkeleton::doAppend(log4cpp::LoggingEvent const&) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+        n1: 14 0x4EA7B44: log4cpp::Category::callAppenders(log4cpp::LoggingEvent const&) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+         n1: 14 0x4EA7DC4: log4cpp::Category::_logUnconditionally2(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+          n1: 14 0x4EA7CE4: log4cpp::Category::_logUnconditionally(int, char const*, __va_list_tag*) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+           n1: 14 0x4EA84FB: log4cpp::Category::warn(char const*, ...) (in /usr/local/lib/liblog4cpp.so.5.0.6)
+            n1: 14 0x10A211: wd::Mylogger::warn(char const*) (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+             n1: 14 0x10A8DE: test2() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+              n0: 14 0x10ABC4: main (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+ n1: 8 0x109BD5: wd::Mylogger::getInstance() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+  n1: 8 0x10A824: test2() (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+   n0: 8 0x10ABC4: main (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+ n0: 4 0x10ABB5: main (in /home/lwh/sources/teach/30/20190729/mylogger/a.out)
+ n0: 0 in 30 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=93
+#-----------
+time=3876653
+mem_heap_B=12
+mem_heap_extra_B=36
+mem_stacks_B=0
+heap_tree=empty
