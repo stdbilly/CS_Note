@@ -1,10 +1,8 @@
-#include <iostream>
+#pragma once
 #include <string>
 #include <unordered_map>
 #include <vector>
 #include "func.h"
-using std::cout;
-using std::endl;
 using std::string;
 using std::unordered_map;
 using std::vector;

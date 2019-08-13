@@ -1,13 +1,11 @@
-#include <iostream>
+#pragma once
 #include <string>
-using std::cout;
-using std::endl;
 using std::string;
 
-enum Color { RED, BLUE };
+enum Color { RED, BLUE, NOTSET };
 
 enum WarriorType {
-    DRAGON_TYPE = 10,
+    DRAGON_TYPE,
     NINJA_TYPE,
     ICEMAN_TYPE,
     LION_TYPE,
