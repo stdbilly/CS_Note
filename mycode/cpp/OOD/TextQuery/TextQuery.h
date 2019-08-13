@@ -18,7 +18,7 @@ class QueryResult;
 class TextQuery {
    public:
    using line_no = vector<string>::size_type;
-    TextQuery(ifstream&);
+    TextQuery(const string&);
     QueryResult query(const string&) const;
 
    private:

@@ -76,8 +76,9 @@ class NotQuery : public Query_base {
 };
 
 inline Query operator~(const Query& operand) {
-    shared_ptr<Query_base> tmp(new NotQuery(operand));
-    return Query(tmp);
+    // shared_ptr<Query_base> tmp(new NotQuery(operand));
+    // return Query(tmp);
+    return shared_ptr<Query_base>(new NotQuery(operand));
 }
 
 class BinaryQuery : public Query_base {
@@ -102,8 +103,10 @@ class AndQuery : public BinaryQuery {
 };
 
 inline Query operator&(const Query& lhs, const Query& rhs) {
-    shared_ptr<Query_base> tmp(new AndQuery(lhs, rhs));
-    return Query(tmp);
+    //相当于
+    //shared_ptr<Query_base> tmp(new AndQuery(lhs, rhs));
+    //return Query(tmp);
+    return shared_ptr<Query_base>(new AndQuery(lhs, rhs));
 }
 
 class OrQuery : public BinaryQuery {
@@ -114,8 +117,9 @@ class OrQuery : public BinaryQuery {
 };
 
 inline Query operator|(const Query& lhs, const Query& rhs) {
-    shared_ptr<Query_base> tmp(new OrQuery(lhs, rhs));
-    return Query(tmp);
+    //shared_ptr<Query_base> tmp(new OrQuery(lhs, rhs));
+    //return Query(tmp);
+    return shared_ptr<Query_base>(new OrQuery(lhs, rhs));
 }
 
 bool getWord(string&);

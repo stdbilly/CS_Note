@@ -1,17 +1,21 @@
 #include "QueryResult.h"
-#include "TextQuery.h"
-
 #include <sstream>
+#include <stdexcept>
 #include <utility>
-
+#include "TextQuery.h"
 using std::cin;
 using std::cout;
 using std::endl;
 using std::istringstream;
+using std::runtime_error;
 
-TextQuery::TextQuery(ifstream& is) : _file(new vector<string>()) {
+TextQuery::TextQuery(const string& filename) : _file(new vector<string>()) {
+    ifstream ifs(filename);
+    if (!ifs) {
+        throw runtime_error("No input file!");
+    }
     string line;
-    while (getline(is, line)) {
+    while (getline(ifs, line)) {
         _file->push_back(line);
         int n = _file->size() - 1;  //行号
         istringstream iss(line);
