@@ -3,7 +3,7 @@
 #pragma once
 #include <vector>
 #include "City.h"
-#include "Headquarter.h"
+#include "Headquarters.h"
 using std::vector;
 
 namespace Warcraft {
@@ -28,10 +28,14 @@ public:
     }
 
     template<typename Iterator>
-    void setRedCreateOrder(Iterator beg, Iterator end);
+    void setRedCreateOrder(Iterator beg, Iterator end) {
+        _redHeadquarter->setWarriorCreateOrder(beg, end);
+    }
 
     template<typename Iterator>
-    void setBlueCreateOrder(Iterator beg, Iterator end);
+    void setBlueCreateOrder(Iterator beg, Iterator end) {
+        _blueHeadquarter->setWarriorCreateOrder(beg, end);
+    }
 
     ~WarcraftWorld() {
         if(_redHeadquarter) delete _redHeadquarter;
@@ -59,15 +63,5 @@ public:
     Headquarters* _blueHeadquarter;  //蓝色司令部
     vector<City> _cities;  //所有的城市，其中0号代表红色司令部，size()-1代表蓝色司令部
 };
-
-template <typename Iterator>
-void WarcraftWorld::setRedCreateOrder(Iterator beg, Iterator end) {
-    _redHeadquarter->setWarriorCreateOrder(beg, end);
-}
-
-template <typename Iterator>
-void WarcraftWorld::setBlueCreateOrder(Iterator beg, Iterator end) {
-    _blueHeadquarter->setWarriorCreateOrder(beg, end);
-}
 
 }  // namespace Warcraft
