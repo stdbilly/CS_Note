@@ -19,11 +19,11 @@ public:
         while (1)
         {
             createWarrior();
-            if(!warriorMarch()) { break; }
+            /* if(!warriorMarch()) { break; }
             cityProduceElements();
             takeCityElements();
             battle();
-            headquarterReportElements();
+            headquarterReportElements(); */
         }
     }
 

@@ -76,11 +76,13 @@ class Headquarters {
 class RedHeadquarter : public Headquarters {
    public:
     RedHeadquarter(int elements) : Headquarters(RED, elements) {}
+    ~RedHeadquarter() {}
 };
 
 class BlueHeadquarter : public Headquarters {
    public:
     BlueHeadquarter(int elements) : Headquarters(BLUE, elements) {}
+    ~BlueHeadquarter() {}
 };
 
 }  // namespace Warcraft

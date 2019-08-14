@@ -1,0 +1,4 @@
+2019-08-14 23:12:56,370 [WARN] warn message, 10 [main.cc:test1:9]
+2019-08-14 23:12:56,370 [ERROR] this is a error messages [main.cc:test1:10]
+2019-08-14 23:12:56,370 [DEBUG] this is a debug messages [main.cc:test1:11]
+2019-08-14 23:12:56,370 [INFO] this is a info messages [main.cc:test1:12]

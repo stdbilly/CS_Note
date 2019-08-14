@@ -15,9 +15,9 @@ class Warrior : public std::enable_shared_from_this<Warrior> {
 
     virtual ~Warrior() {}
 
-    virtual void march();
+    /* virtual void march();
     virtual void attack(Warrior* warrior);
-    virtual void defense(Warrior* warrior);
+    virtual void defense(Warrior* warrior); */
 
     void beWinner();
     void beRewarded();
@@ -55,23 +55,26 @@ class Dragon : public Warrior {
    public:
     Dragon(Color color, int id, int hp, int forces)
         : Warrior(color, DRAGON_TYPE, "dragon", id, hp, forces) {}
+    ~Dragon() {}
 };
 
 class Ninja : public Warrior {
    public:
     Ninja(Color color, int id, int hp, int forces)
         : Warrior(color, NINJA_TYPE, "ninja", id, hp, forces) {}
+    ~Ninja() {}
     // ninja挨打了也不反击
-    void defense(Warrior* warrior) override;
+    //void defense(Warrior* warrior) override;
 };
 
 class Iceman : public Warrior {
    public:
     Iceman(Color color, int id, int hp, int forces)
         : Warrior(color, ICEMAN_TYPE, "iceman", id, hp, forces), _steps(0) {}
+    ~Iceman() {}
     // iceman 每前进两步，在第2步完成的时候，生命值会减少9，攻击力会增加20。
     //但是若生命值减9后会小于等于0，则生命值不减9,而是变为1
-    void march() override;
+    //void march() override;
 
    private:
     int _steps;
@@ -94,7 +97,7 @@ class Wolf : public Warrior {
     发生在加倍之后。只有在主动攻击杀死敌人时才能有加倍的事情，反击杀死敌人则不不会发生加倍
      */
 
-    void attack(Warrior* warrior) override;
+    //void attack(Warrior* warrior) override;
 
    private:
     int _killTimes;  //击杀次数

@@ -33,10 +33,10 @@ void test0() {
         TIME->showTime();
         wow.setRedCreateOrder(order1.begin(), order1.end());
         wow.setBlueCreateOrder(order2.begin(), order2.end());
-
+        wow.start();
 
         CONFIG->nextGroupId();
-        GameTime::getInstance()->reset();
+        TIME->reset();
     }
 }
 
