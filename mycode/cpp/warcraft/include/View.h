@@ -1,6 +1,6 @@
 #pragma once
 #include "City.h"
-#include "Headquarter.h"
+#include "Headquarters.h"
 #include "warrior.h"
 using namespace Warcraft;
 

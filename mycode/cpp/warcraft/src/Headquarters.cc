@@ -24,5 +24,23 @@ Warrior* Headquarters::create() {
 }
 
 Warrior* Headquarters::createDragon(size_t id, int hp, int forces) {
-    
+    if(_elements < CONFIG->warriorInitLife(DRAGON_TYPE)) {
+        return nullptr;
+    }
+    Warrior* dragon = new Dragon(_color, id, hp, forces);
+    _elements -= hp;
+    _warriors.push_back(dragon);
+    ++_warriorTypeCount[DRAGON_TYPE];
+    return dragon;
+}
+
+Warrior* Headquarters::createNinja(size_t id, int hp, int forces) {
+    if(_elements < CONFIG->warriorInitLife(NINJA_TYPE)) {
+        return nullptr;
+    }
+    Warrior* ninja = new Ninja(_color, id, hp, forces);
+    _elements -= hp;
+    _warriors.push_back(ninja);
+    ++_warriorTypeCount[NINJA_TYPE];
+    return ninja;
 }
