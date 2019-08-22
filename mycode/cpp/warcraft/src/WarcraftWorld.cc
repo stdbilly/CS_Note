@@ -3,8 +3,8 @@
 #include "../include/View.h"
 #include <memory.h>
 using std::unique_ptr;
-using namespace Warcraft;
 
+namespace Warcraft {
 void WarcraftWorld::init() {
     _redHeadquarter = new RedHeadquarter(GameConfig::getInstance()->headquartersInitElem());
     _blueHeadquarter = new BlueHeadquarter(GameConfig::getInstance()->headquartersInitElem());
@@ -16,4 +16,6 @@ void WarcraftWorld::createWarrior() {
         unique_ptr<WarriorView> view(new WarriorView(warrior));
         view.get()->showBorn();
     }
+}
+
 }

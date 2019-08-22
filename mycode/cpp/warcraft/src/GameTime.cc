@@ -4,8 +4,8 @@
 #include <iomanip>
 using std::cout;
 using std::endl;
-using namespace Warcraft;
 
+namespace Warcraft {
 void GameTime::showTime() const {
     cout << std::setfill('0') ;
     cout << std::setw(3) << _time/60 << ":" << std::setw(2) << _minute << " " <<endl; 
@@ -22,3 +22,4 @@ bool GameTime::updateTime() {
 
 GameTime* GameTime::_pInstance = nullptr;
 pthread_once_t GameTime::_once = PTHREAD_ONCE_INIT;
+}

@@ -16,7 +16,7 @@ using std::endl;
  
 int main(void)
 {
-	wd::Acceptor acceptor("192.168.5.171", 8888);
+	wd::Acceptor acceptor("192.168.5.171", 2000);
 	acceptor.ready();
 	
 	wd::TcpConnection conn(acceptor.accept());

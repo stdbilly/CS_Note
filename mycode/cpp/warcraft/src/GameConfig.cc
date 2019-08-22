@@ -7,8 +7,8 @@ using std::endl;
 using std::ifstream;
 using std::istringstream;
 using std::make_pair;
-using namespace Warcraft;
 
+namespace Warcraft {
 void GameConfig::readFromFile(const string& filename) {
     ifstream ifs(filename);
     if (!ifs) {
@@ -53,3 +53,4 @@ void GameConfig::debug() {
 
 GameConfig* GameConfig::_pInstance = nullptr;
 pthread_once_t GameConfig::_once = PTHREAD_ONCE_INIT;
+}

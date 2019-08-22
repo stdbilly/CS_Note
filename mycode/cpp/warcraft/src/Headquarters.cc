@@ -2,8 +2,7 @@
 #include "../include/GameConfig.h"
 #include "../include/warrior.h"
 
-using namespace Warcraft;
-
+namespace Warcraft {
 Warrior* Headquarters::create() {
     size_t id = _warriors.size() + 1;
     switch (_warriorCreateOrder[_nextWarriorIndex]) {
@@ -43,4 +42,6 @@ Warrior* Headquarters::createNinja(size_t id, int hp, int forces) {
     _warriors.push_back(ninja);
     ++_warriorTypeCount[NINJA_TYPE];
     return ninja;
+}
+
 }

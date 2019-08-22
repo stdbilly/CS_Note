@@ -2,8 +2,8 @@
 #include "City.h"
 #include "Headquarters.h"
 #include "warrior.h"
-using namespace Warcraft;
 
+namespace Warcraft {
 class WarriorView {
    public:
     WarriorView(Warrior* warrior) : _warrior(warrior) {}
@@ -67,3 +67,5 @@ class CityView {
    private:
     City* _city;
 };
+
+}
