@@ -15,11 +15,11 @@ class Queue {
 
     bool empty() const { return _front == _rear; }
 
-    bool full() const { return _front == (_rear + 1) % _size; }
+    bool full() const { return (_rear + 1) % _size == _front; }
 
     void push(int x) {
         if (!full()) {
-            _data[_rear++] = x;
+            _data[_rear++] = x; //数据放入rear所在的位置,然后rear+1
             _rear %= _size;
         } else {
             cout << "queue is full" << endl;

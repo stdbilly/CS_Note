@@ -10,13 +10,13 @@ class Solution {
         int row = array.size();        //行数
         int column = array[0].size();  //列数
         int j = column - 1, i = 0;
-        while (i < row && j >= 0) {
+        while (i < row && j >= 0) { //从右上角开始查找
             if (array[i][j] == target) {
                 return true;
             } else if (array[i][j] > target) {
-                --j;
+                --j; //剔除所在的列
             } else {
-                ++i;
+                ++i; //剔除所在的行
             }
         }
         return false;
