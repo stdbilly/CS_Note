@@ -19,6 +19,7 @@ class Solution {
                             vecIterator begInorder, vecIterator endInorder) {
         //前序遍历序列的第一个数字为根节点的值
         TreeNode* root = new TreeNode(*begPreorder);
+        //递归出口
         if (begPreorder + 1 == endPreorder) {
             if (begInorder + 1 == endInorder && *begPreorder == *begInorder)
                 return root;
@@ -27,9 +28,6 @@ class Solution {
         }
         //在中序遍历中找到根节点的值
         auto rootInorder = std::find(begInorder, endInorder, root->val);
-        /* while (rootInorder < endInorder && *rootInorder != root->val) {
-            ++rootInorder;
-        } */
 
         if (rootInorder == endInorder) {
             throw std::exception();
