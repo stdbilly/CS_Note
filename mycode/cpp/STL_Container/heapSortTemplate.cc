@@ -8,12 +8,12 @@ using std::swap;
 template <typename T, typename Compare = std::less<T> >
 class HeapSort {
 public:
-    void heapAdjust(vector<T>& arr, int pos, int arrLen) {
+    void heapAdjust(vector<T>& arr, int pos, int arrLen, Compare comp = Compare()) {
         while(true) {
             int maxPos = pos;
-            if(pos * 2 + 1 < arrLen && compare(arr[pos], arr[pos * 2 + 1]))
+            if(pos * 2 + 1 < arrLen && comp(arr[pos], arr[pos * 2 + 1]))
                 maxPos = pos * 2 + 1;
-            if(pos * 2 + 2 < arrLen && compare(arr[maxPos], arr[pos * 2 + 2]))
+            if(pos * 2 + 2 < arrLen && comp(arr[maxPos], arr[pos * 2 + 2]))
                 maxPos = pos * 2 + 2;
 
             if(maxPos == pos) 
@@ -23,9 +23,9 @@ public:
         }
     }
 
-    bool compare(const T& lhs, const T& rhs, Compare com = Compare()) {
+   /*  bool compare(const T& lhs, const T& rhs, Compare com = Compare()) {
         return com(lhs,rhs);
-    }
+    } */
 
     void sort(vector<T>& arr) {
         for(int i = arr.size()/2 - 1; i >= 0; --i) {
@@ -44,7 +44,7 @@ public:
 void test1() {
     vector<int> nums({3,6,2,5,12,4,8,15,11});
     //HeapSort<int> heap;
-    HeapSort<int,std::greater<int> > heap;
+    HeapSort<int> heap;
     heap.sort(nums);
     for(int& i:nums) {
         cout << i << " " ;

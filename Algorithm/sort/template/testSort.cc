@@ -10,7 +10,12 @@ void test1(int N, int M) {
     display(arr);
     auto start = std::chrono::system_clock::now();
     //selectionSort(arr);
-    insertionSort(arr);
+    //insertionSort(arr);
+    //shellSort(arr);
+    //mergeSortRecursive(arr, 0, arr.size() -1);
+    //quickSort(arr, 0, arr.size() - 1);
+    //countingSort(arr, M);
+    heapSort(arr);
     auto end = std::chrono::system_clock::now();
     display(arr);
     std::chrono::duration<double> elapsed_seconds = end - start;
@@ -21,12 +26,13 @@ void test2() {
     vector<double> arr{4.6, 5.7, 2.6, 0.4, 3.7, 1.8, 8.9};
     display(arr);
     //selectionSort(arr);
-    insertionSort(arr);
+    //insertionSort(arr);
+    shellSort(arr);
     display(arr);
 }
 
 int main() {
     test1(10, 100);
-    test2();
+    //test2();
     return 0;
 }
