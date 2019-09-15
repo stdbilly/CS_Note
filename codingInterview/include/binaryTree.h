@@ -7,13 +7,13 @@ struct TreeNode {
     int val;
     TreeNode* left;
     TreeNode* right;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 };
 
 void connectTreeNodes(TreeNode* parent, TreeNode* left, TreeNode* right) {
     if (parent) {
         parent->left = left;
-        parent->left = right;
+        parent->right = right;
     }
 }
 
@@ -53,4 +53,14 @@ void destroyTree(TreeNode* root) {
         destroyTree(left);
         destroyTree(right);
     }
+}
+
+template <class Container>
+void display(const Container& c) {
+    typename Container::const_iterator cit = c.begin();
+    while (cit != c.end()) {
+        cout << *cit << " ";
+        ++cit;
+    }
+    cout << endl;
 }
