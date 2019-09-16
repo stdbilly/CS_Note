@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <iostream>
 #include <vector>
 using std::cout;
@@ -93,18 +94,27 @@ void mergeSortRecursive(vector<T>& arr, int left, int right) {
     merge(arr, left, mid, right);
 }
 
+int randomInRange(int min, int max) {
+    int random = rand() % (max -min + 1) + min;
+    return random;
+}
+
 template <typename T>
 int partition(vector<T>& arr, int left, int right) {
-    int k = left;
-    //选择最后一个元素作为分割点, [left...k)小于分割点
-    for (int i = left; i < right; ++i) {
-        if (arr[i] < arr[right]) {
-            std::swap(arr[i], arr[k]);
-            ++k;
+    int index = randomInRange(left, right);
+    std::swap(arr[index], arr[right]);
+
+    int small = left;
+    //选择最后一个元素作为分割点, [left...small)小于分割点
+    for (index = left; index < right; ++index) {
+        if (arr[index] < arr[right]) {
+            if(small != index)
+                std::swap(arr[index], arr[small]);
+            ++small;
         }
     }
-    std::swap(arr[k], arr[right]);
-    return k;
+    std::swap(arr[small], arr[right]);
+    return small;
 }
 
 template <typename T>

@@ -13,9 +13,9 @@ void test1(int N, int M) {
     //insertionSort(arr);
     //shellSort(arr);
     //mergeSortRecursive(arr, 0, arr.size() -1);
-    quickSort(arr, 0, arr.size() - 1);
+    //quickSort(arr, 0, arr.size() - 1);
     //countingSort(arr, M);
-    //heapSort(arr);
+    heapSort(arr);
     auto end = std::chrono::system_clock::now();
     //display(arr);
     std::chrono::duration<double> elapsed_seconds = end - start;
@@ -32,7 +32,7 @@ void test2() {
 }
 
 int main() {
-    test1(10, 100);
+    test1(100000, 100);
     //test2();
     return 0;
 }
