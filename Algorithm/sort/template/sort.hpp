@@ -58,7 +58,7 @@ void shellSort(vector<T>& arr) {
     }
 }
 
-template <typename T>
+/* template <typename T>
 void merge(vector<T>& arr, int left, int mid, int right) {
     // Array[left...mid] is sorted
     // Array[mid+1 ... right] is sorted
@@ -89,13 +89,61 @@ template <typename T>
 void mergeSortRecursive(vector<T>& arr, int left, int right) {
     if (left >= right) return;
     int mid = left + ((right - left) >> 1);
+
     mergeSortRecursive(arr, left, mid);
     mergeSortRecursive(arr, mid + 1, right);
+
     merge(arr, left, mid, right);
+} */
+
+template <typename T, typename Compare>
+void merge(vector<T>& arr, vector<T>& tempArr, int start, int mid, int end, Compare comp) {
+    for (int i = start; i <= end; ++i) {
+        tempArr[i] = arr[i];
+    }
+
+    int idxLeft = start, idxRight = mid + 1;
+    for (int k = start; k <= end; ++k) {
+        if (idxLeft > mid) {
+            //如果左边的首位下标大于中部下标，证明左边的数据已经排完了
+            arr[k] = tempArr[idxRight];
+            ++idxRight;
+        } else if (idxRight > end) {
+            //如果右边的首位下标大于了数组长度，证明右边的数据已经排完了
+            arr[k] = tempArr[idxLeft];
+            ++idxLeft;
+        } else if (comp(tempArr[idxLeft], tempArr[idxRight])) {
+            //将左右两个子数组中较小的放入arr(从小到大排序)
+            arr[k] = tempArr[idxLeft];
+            ++idxLeft;
+        } else {
+            arr[k] = tempArr[idxRight];
+            ++idxRight;
+        }
+    }
 }
 
+template <typename T, typename Compare>
+void mergeSortRecursive(vector<T>& arr, vector<T>& tempArr, int start,
+                        int end, Compare comp) {
+    if (start >= end) return;
+    int mid = start + ((end - start) >> 1);
+
+    mergeSortRecursive(arr, tempArr, start, mid, comp);
+    mergeSortRecursive(arr, tempArr, mid + 1, end, comp);
+
+    merge(arr, tempArr, start, mid, end, comp);
+}
+//最开始申请一个临时数组, 快一些
+template <typename T, typename Compare = std::less<T>>
+void mergeSort(vector<T>& arr, Compare comp = Compare()) {
+    vector<T> tempArr(arr.size());
+    mergeSortRecursive(arr, tempArr, 0, arr.size() - 1, comp);
+}
+
+//随机选取分割点
 int randomInRange(int min, int max) {
-    int random = rand() % (max -min + 1) + min;
+    int random = rand() % (max - min + 1) + min;
     return random;
 }
 
@@ -108,8 +156,7 @@ int partition(vector<T>& arr, int left, int right) {
     //选择最后一个元素作为分割点, [left...small)小于分割点
     for (index = left; index < right; ++index) {
         if (arr[index] < arr[right]) {
-            if(small != index)
-                std::swap(arr[index], arr[small]);
+            if (small != index) std::swap(arr[index], arr[small]);
             ++small;
         }
     }
@@ -139,8 +186,8 @@ void countingSort(vector<int>& arr, int M) {
     }
 }
 
-template <typename T, typename Compare = std::less<T>>
-void heapify(vector<T>& arr, int pos, int len, Compare comp = Compare()) {
+template <typename T, typename Compare>
+void heapify(vector<T>& arr, int pos, int len, Compare comp) {
     //从上往下调整为大根堆
     int parent = pos;
     int child = 2 * parent + 1;
@@ -149,7 +196,8 @@ void heapify(vector<T>& arr, int pos, int len, Compare comp = Compare()) {
         if (child + 1 < len && comp(arr[child], arr[child + 1])) {
             ++child;
         }
-        if (arr[parent] < arr[child]) {
+        if (comp(arr[parent], arr[child])) {
+            //如果子节点比父节点大,就交换(大顶堆, 从小到大排序, 最大的元素放在了数组末尾)
             std::swap(arr[parent], arr[child]);
             parent = child;
             child = 2 * parent + 1;
@@ -159,16 +207,16 @@ void heapify(vector<T>& arr, int pos, int len, Compare comp = Compare()) {
     }
 }
 
-template <typename T>
-void heapSort(vector<T>& arr) {
+template <typename T, typename Compare = std::less<T>>
+void heapSort(vector<T>& arr, Compare comp = Compare()) {
     //建堆
     for (int i = arr.size() / 2 - 1; i >= 0; --i) {
-        heapify(arr, i, arr.size());
+        heapify(arr, i, arr.size(), comp);
     }
     int k = arr.size();
     while (k > 1) {
         std::swap(arr[0], arr[k - 1]);
         --k;
-        heapify(arr, 0, k);
+        heapify(arr, 0, k, comp);
     }
 }

@@ -7,17 +7,18 @@ void test1(int N, int M) {
     for (int i = 0; i < N; ++i) {
         arr[i] = ::rand() % M;
     }
-    //display(arr);
+    display(arr);
     auto start = std::chrono::system_clock::now();
     //selectionSort(arr);
     //insertionSort(arr);
     //shellSort(arr);
-    //mergeSortRecursive(arr, 0, arr.size() -1);
+    //mergeSort<int, std::greater<int>>(arr);
+    //mergeSortRecursive(arr, 0, arr.size() - 1);
     //quickSort(arr, 0, arr.size() - 1);
     //countingSort(arr, M);
-    heapSort(arr);
+    heapSort<int, std::greater<int>>(arr);
     auto end = std::chrono::system_clock::now();
-    //display(arr);
+    display(arr);
     std::chrono::duration<double> elapsed_seconds = end - start;
     cout << "use time: " << elapsed_seconds.count() << " sec\n";
 }
@@ -32,7 +33,7 @@ void test2() {
 }
 
 int main() {
-    test1(100000, 100);
+    test1(10, 100);
     //test2();
     return 0;
 }
