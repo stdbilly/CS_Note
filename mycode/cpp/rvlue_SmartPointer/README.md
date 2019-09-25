@@ -119,6 +119,10 @@ int main() {
 
 std::move将左值引用转换为右值引用,本质上是一个强制转换
 
+## 智能指针解决什么问题,怎么实现的,说说其构造函数,拷贝构造函数的实现
+
+解决内存泄露问题, 确保在正确的时间释放内存
+
 ## 智能指针的实现原理是什么？
 
 资源管理的技术: RAII(Resource Acquisition Is Initialization)
@@ -136,7 +140,14 @@ std::move将左值引用转换为右值引用,本质上是一个强制转换
 
 - auto_ptr：在构造时获取对某个对象的所有权(ownership),在析构时释放该对象
 
-  在拷贝构造或赋值操作时,会发生所有权的转移，不是真正的复制或赋值操作。该指针存在缺陷，所以不再使用
+  ```C++
+  explicit auto_ptr(_Tp* __p = 0) __STL_NOTHROW : _M_ptr(__p) {}
+  auto_ptr(auto_ptr& __a) __STL_NOTHROW : _M_ptr(__a.release()) {}
+  ```
+
+  构造函数对指针变量直接传递地址,浅拷贝
+
+  在拷贝构造或赋值操作时,调用了`release()`方法会发生所有权的转移，不是真正的复制或赋值操作。该指针存在缺陷，所以不再使用
 
 - unique_ptr：是一个独享所有权的智能指针
 
@@ -154,9 +165,15 @@ std::move将左值引用转换为右值引用,本质上是一个强制转换
 
   复制构造与赋值操作符只是提供一般意义上的复制功能,并且将引用计数加1，给shared_ptr赋予一个新值，计数器会递减
 
+  shared_ptr的循环引用会导致内存泄漏
+
+  误用：把一个原生裸指针交给不同的智能指针进行托管，对象会析构多次
+
+  在成员函数内部获得本对象的智能指针要使用`shared_from_this()`
+
 - weak_ptr：是一种不控制所指向对象生存期的智能指针，它指向由一个shared_ptr管理的对象。
 
-  将一个weak_ptr绑定到一个shared_ptr不会改变shared_ptr的引用计数。
+  将一个weak_ptr绑定到一个shared_ptr不会改变shared_ptr的引用计数。weak_ptr可以解决shared_ptr的循环引用问题
 
   通过weak_ptr访问对象时，必须调用lock，此函数检查weak_ptr指向的对象是否仍存在。如果存在，lock返回一个指向共享对象的shared_ptr
 
