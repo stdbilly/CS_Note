@@ -36,7 +36,7 @@ class Solution {
 
         ListNode* pSlow = pHead;
         ListNode* pFast = pSlow->next;
-        while (pFast && pFast->next && pSlow) {
+        while (pSlow && pFast && pFast->next) {
             if (pFast == pSlow) return pFast;
             pSlow = pSlow->next;
             pFast = pFast->next->next;
@@ -57,7 +57,7 @@ int main() {
     connectListNodes(pNode2, pNode3);
     connectListNodes(pNode3, pNode4);
     connectListNodes(pNode4, pNode5);
-    connectListNodes(pNode5, pNode3);
+    connectListNodes(pNode5, pNode3);//3
     ListNode* node = solution.EntryNodeOfLoop(pNode1);
     cout << node->val << endl;
     
