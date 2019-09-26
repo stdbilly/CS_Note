@@ -47,13 +47,11 @@ class __default_alloc_template;//二级配置器
         };
 
         static _Obj* _S_free_list[_NFREELISTS]; 
-```
-```C++
     //内存池
         static char* _S_start_free;
         static char* _S_end_free;
         static size_t _S_heap_size;
 ```
-    > 分配策略：
+     分配策略：
         > 1. 当申请128字节以上的空间时，直接采用一级配置器malloc/free
         > 2. 当申请128字节以下的空间时，就采用自由空闲链表+内存池的方式
