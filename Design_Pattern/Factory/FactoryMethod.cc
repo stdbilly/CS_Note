@@ -72,17 +72,12 @@ class Triangle : public Figure {
     double _c;
 };
 
-//工厂模式
+//工厂方法
 //前提条件:
 //	 1. 针对于复杂对象
 //	 2. 批量创建对象
 //
 //对于简单对象，不适合使用工厂模式
-//
-//
-//抽象工厂：
-//	 一个工厂生产多种系列的产品
-
 class Factory {
    public:
     virtual Figure* create() = 0;

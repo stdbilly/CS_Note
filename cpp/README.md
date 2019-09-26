@@ -201,6 +201,25 @@ void *memset(void *, int, size_t);
 - const 可以是 volatile （如只读的状态寄存器）
 - 指针可以是 volatile
 
+## 前置++与后置++
+
+```C++
+//前置形式，增加然后取回值
+UPInt& UPInt::operator++() {
+    *this += 1;
+    return *this;
+}
+```
+```C++
+//后置形式，取回然后增加
+//后置形式在其参数中多加一个int，该int不是要传递参数，只是为了前置形式进行区分
+const UPInt UPInt::operator++(int) {
+    UPInt oldValue = *this;
+    ++*this;
+    return oldValue;
+}
+```
+
 ## [继承与派生](继承与派生.md)
 
 ## [虚函数与多态](虚函数与多态.md)

@@ -25,13 +25,14 @@
 
 缺点：1. 不满足单一职责原则      2. 不满足开闭原则
 
-## 工厂方法模式(Factory method)
+## [工厂方法模式(Factory method)](Factory/FactoryMethod.cc)
 
 定义一个用于创建对象的接口, 让子类决定实例化哪一个类. Factory Method使一个类的实例化延迟到其子类.
 
-## [抽象工厂(Abstract Factory)](Factory/AbstractFactory.cc)
+## 抽象工厂(Abstract Factory)
 
 提供一个创建一系列相关或相互依赖对象的借口,而无需指定他们具体的类.
+一个工厂创建多种产品
 
 ##### 优点
 

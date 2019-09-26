@@ -80,7 +80,7 @@ class Cube : public Figure {
     double _a;
 };
 
-//静态工厂方法
+//静态工厂方法(简单工厂)
 //缺点：1. 不满足单一职责原则
 //		2. 不满足开闭原则
 class Factory {
