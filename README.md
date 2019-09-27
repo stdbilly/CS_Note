@@ -2,11 +2,13 @@
 
 ## 目录
 
-###### C
+#### [C](C/README.md)
 
-###### [C++](cpp/README.md)
+#### [C++](cpp/README.md)
 
-###### Linux
+#### [Linux](Linux/README.md)
 
-###### [设计模式](Design_Pattern/README.md)
+#### [算法](Algorithm/README.md)
+
+#### [设计模式](Design_Pattern/README.md)
 
