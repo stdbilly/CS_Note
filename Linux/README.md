@@ -26,7 +26,7 @@ $ gcc -c add.c //编译 add.c 源文件生成 add.o 目标文件
 $ ar crsv libadd.a add.o //对目标文件*.o 进行归档,生成 lib*.a,
 //将库文件 libadd.a 拷贝到/lib 或者/usr/lib 下(系统默认搜索库路径)
 
-$gcc -o main main.c –ladd //-ladd 表示链接库文件 libadd.a/.so
+$ gcc -o main main.c –ladd //-ladd 表示链接库文件 libadd.a
 ```
 
 ##### 动态库
@@ -43,5 +43,6 @@ $gcc -o main main.c –ladd //-ladd 表示链接库文件 libadd.a/.so
 ```shell
 $ gcc -fPIC -shared -o libadd.so add.c
 //在运行 main 前,需要注册动态库的路径。将库文件拷贝到/lib 或者/usr/lib 下(系统默认搜索库路径)。
+gcc -o main main.c –ladd //-ladd 表示链接库文件 libadd.so
 ```
 
