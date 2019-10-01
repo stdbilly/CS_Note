@@ -1,15 +1,11 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <func.h>
 #define NUM 2+3
 void print(int k)
 {
-    printf("I am print k=%d\n",k);
-    printf("I am print1 k=%d\n",k);
-	char *p=NULL;
-	*p='H';
-    printf("I am print2 k=%d\n",k);
+    char *p=NULL;
+    *p='H';
 }
-int main()
+int main(int argc,char *argv[])
 {
 	int *p;
 	int arr[3]={1,2,3};
