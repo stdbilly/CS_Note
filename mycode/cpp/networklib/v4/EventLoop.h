@@ -24,6 +24,7 @@ class EventLoop {
     void loop();
     void unloop();
     void runInloop(Functor&& cb);
+    
     void setConnectionCallback(const TCPConnectionCallback&& cb) {
         _onConnection = std::move(cb);
     }

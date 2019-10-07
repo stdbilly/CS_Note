@@ -12,6 +12,7 @@ class MyTask {
    public:
     MyTask(const string& msg, const TCPConnectionPtr conn)
         : _msg(msg), _conn(conn) {}
+        
     //运行在线程池的某一个子线程中
     void process() {
         cout << ">>" << current_thread::threadName << ": MyTask::process()"
