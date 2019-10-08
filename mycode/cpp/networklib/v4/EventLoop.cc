@@ -36,6 +36,7 @@ void EventLoop::unloop() {
 void EventLoop::runInloop(Functor&& cb) {
     {
         MutexGuard autolock(_mutex);
+        //cb为TCPConnection::send
         _pendingFunctors.push_back(std::move(cb));
     }
     wakeup();

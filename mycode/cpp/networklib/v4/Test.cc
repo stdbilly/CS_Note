@@ -34,6 +34,7 @@ class EchoServer {
 
     void start() {
         _threadpool.start();
+        //回调函数最终注册给TCPConnection
         _server.setConnectionCallback(
             std::bind(&EchoServer::onConnection, this, std::placeholders::_1));
         _server.setMessageCallback(
@@ -53,6 +54,7 @@ class EchoServer {
         cout << ">> client data: " << msg << endl;
 
         MyTask task(msg, conn);
+        //将任务放入线程池
         _threadpool.addTask(std::bind(&MyTask::process, task));
     }
 
