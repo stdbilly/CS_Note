@@ -12,6 +12,18 @@
 
   ![_images/uml_generalization.jpg](.assets/uml_generalization.jpg)
 
+- 组合：
+
+  UML：用一条带实心菱形箭头直线表示，如下图表示A组成B，或者B由A组成
+
+  A has B
+
+  整体和局部：整体部分负责局部对象的销毁
+
+  作为数据成员：对象成员
+
+  ![_images/uml_composition.jpg](.assets/uml_composition.jpg)
+
 - 聚合：
 
   UML：用一条带空心菱形箭头的直线表示，如下图表示A聚合到B上，或者说B由A组成
@@ -25,18 +37,6 @@
   作为数据成员：指针或引用
 
   ![_images/uml_aggregation.jpg](.assets/uml_aggregation.jpg)
-
-- 组合：
-
-  UML：用一条带实心菱形箭头直线表示，如下图表示A组成B，或者B由A组成
-
-  A has B
-
-  整体和局部：整体部分负责局部对象的销毁
-
-  作为数据成员：对象成员
-
-  ![_images/uml_composition.jpg](.assets/uml_composition.jpg)
 
 - 关联：
 
@@ -56,7 +56,7 @@
 
 - 依赖：
 
-- UML:用一套带箭头的虚线表示的；如下图表示A依赖于B；他描述一个对象在运行期间会用到另一个对象的关系;
+  UML:用一套带箭头的虚线表示的；如下图表示A依赖于B；他描述一个对象在运行期间会用到另一个对象的关系;
 
   与关联关系不同的是，它是一种临时性的关系，通常在运行期间产生，并且随着运行时的变化； 依赖关系也可能发生变化；
 
@@ -67,14 +67,15 @@
   从语义上来说是 A use B，是偶然的，临时的，并非固定的
 
   通过函数来表现
-  
+
   B作为A的成员函数参数
-  
+
   B作为A的成员函数的局部变量
-  
+
   A的成员函数调用B的静态方法
-  
+
   ![_images/uml_dependency.jpg](.assets/uml_dependency.jpg)
+
 
 ## 面向对象设计原则有哪些？各自的特点是什么？
 
