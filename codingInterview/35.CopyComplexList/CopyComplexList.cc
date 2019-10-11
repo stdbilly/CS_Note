@@ -101,3 +101,55 @@ int main() {
     Test1();
     return 0;
 }
+
+
+
+
+
+ ComplexListNode* Clone(ComplexListNode* pHead) {
+        cloneNodes(pHead);
+        connectSiblingNodes(pHead);
+        return reconnectNodes(pHead);
+    }
+
+    void cloneNodes(ComplexListNode* pHead) {
+        ComplextListNode* pNode = pHead;
+        while (pNode) {
+            ComplexListNode* pClone = new ComplexListNode(pNode->m_nValue);
+            pClone->m_pNext = pNode->m_pNext;
+            pNode->m_pNext = pClone;
+            pNode = pClone->m_pNext;
+        }
+    }
+
+    void connectSiblingNodes(ComplexListNode* pHead) {
+        ComplexListNode* pNode = pHead;
+        while (pNode) {
+            ComplexListNode* pClone = pNode->m_pNext;
+            if (pNode->m_pSibling) {
+                pClone->m_pSibling = pNode->m_pSibling->m_pNext;
+            }
+            pNode = pClone->m_pNext;
+        }
+    }
+
+    ComplexListNode* reconnectNodes(ComplexListNode* pHead) {
+        ComplexListNode* pNode = pHead;
+        ComplexListNode* pCloneHead = nullptr;
+        ComplexListNode* pCloneNode = nullptr;
+
+        if (pNode) {
+            pCloneHead = pCloneNode = pNode->m_pNext;
+            pNode->m_pNext = pCloneNode->m_pNext;
+            pNode = pNode->m_pNext;
+        }
+
+        while (pNode) {
+            pCloneNode->m_pNext = pNode->m_pNext;
+            pCloneNode = pCloneNode->m_pNext;
+
+            pNode->m_pNext = pCloneNode->m_pNext;
+            pNode = pNode->m_pNext;
+        }
+        return pCloneHead;
+    }
