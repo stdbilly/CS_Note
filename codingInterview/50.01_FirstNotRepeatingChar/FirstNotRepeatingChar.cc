@@ -4,6 +4,10 @@ using std::cout;
 using std::endl;
 using std::string;
 
+// 面试题50（一）：字符串中第一个只出现一次的字符
+// 题目：在字符串中找出第一个只出现一次的字符。如输入"abaccdeff"，则输出
+// 'b'。
+
 class Solution {
    public:
     int FirstNotRepeatingChar(string str) {
