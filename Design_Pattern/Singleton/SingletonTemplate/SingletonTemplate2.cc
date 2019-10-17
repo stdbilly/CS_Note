@@ -12,11 +12,6 @@ class Singleton {
         return _pInstance;
     }
 
-    static void init() {
-        _pInstance = new T();
-        ::atexit(destroy);
-    }
-
     static void destroy() {
         if (_pInstance) {
             delete _pInstance;
@@ -24,6 +19,11 @@ class Singleton {
     }
 
    private:
+    static void init() {
+        _pInstance = new T();
+        ::atexit(destroy);
+    }
+
     Singleton() { cout << "Singleton()" << endl; }
 
     ~Singleton() { cout << "~Singleton()" << endl; }
